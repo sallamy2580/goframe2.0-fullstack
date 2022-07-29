@@ -1,19 +1,19 @@
 # hotgo
 
 
-#### HotGo 是一个基于 vue 和 goframe2.0 开发的全栈前后端分离的开发基础平台和移动应用平台，集成jwt鉴权，动态路由，动态菜单，casbin鉴权，消息队列，定时任务等功能，提供多种常用场景文件，让您把更多时间专注在业务开发上。
+#### HotGo is a full-stack development base platform and mobile application platform based on vue and goframe2.0 with front-end and back-end separation. It integrates jwt authentication, dynamic routing, dynamic menu, casbin authentication, message queue, timed tasks and other functions. A variety of common scene files, allowing you to focus more time on business development
 
-## 技术选型
+## Technical selection
 
-* 后端：用 goframe2.0 快速搭建基础API，goframe2.0 是一个go语言编写的Web框架。
-* 前端：用基于 JeeSite Mobile Uni-App+aidex-sharp 构建基础页面。
-* 数据库：采用MySql(8.0)版本，使用 gorm 实现对数据库的基本操作。
-* 缓存：使用Redis实现记录当前活跃用户的jwt令牌并实现多点登录限制。
-* API文档：使用Swagger构建自动化文档。
-* 消息队列：同时兼容 kafka、redis、rocketmq，一键配置切换到自己想用的MQ。
+* Backend: Use goframe2.0 to quickly build basic API, goframe2.0 is a web framework written in go language.
+* Front-end: Build basic pages based on JeeSite Mobile Uni-App+aidex-sharp.
+* Database: Using MySql (8.0) version, use gorm to implement basic operations on the database.
+* Cache: Use Redis to record the jwt token of the current active user and implement multi-sign-on restrictions.
+* API Documentation: Use Swagger to build automated documentation.
+* Message queue: Compatible with kafka, redis, rocketmq at the same time, one-click configuration to switch to the MQ you want to use.
 
-## 系统截图
-#### * web端
+## System screenshot
+#### * web side
 
 ![image](https://user-images.githubusercontent.com/26652343/155689571-e6a0a5a3-011b-44cc-b84b-a1c82301b207.png)
 
@@ -21,63 +21,63 @@
 
 ![image](https://user-images.githubusercontent.com/26652343/155689709-5ddac1d3-1c01-4fab-9d3a-9ece72ca5ba0.png)
 
-#### * 移动端
+#### * mobile
 ![image](https://user-images.githubusercontent.com/26652343/155689481-2fc019eb-18e4-4a94-b417-50524e945089.png)
 ![image](https://user-images.githubusercontent.com/26652343/155689738-ac97f9c0-47ae-499b-b3fe-0cb4ce97f3bc.png)
 
-## 环境要求
-- node版本 >= v14.0.0 
-- golang版本 >= v1.16
-- IDE推荐：Goland
-- mysql版本 >=8.0
-- redis版本 >=5.0
+## Environmental requirements
+- node version >= v14.0.0 
+- golang version >= v1.16
+- IDEversion：Goland
+- mysqlversion >=8.0
+- redisversion >=5.0
 
-## 快速开始
- 一、拉取代码到你已经安装好以上环境的服务器中
+## quick start
+1. Pull the code to the server where you have installed the above environment
  ```shell script
 git clone https://github.com/bufanyun/hotgo.git
  ```
 
-二、配置你的站点信息
+2. Configure your site information
 
-服务端：
- - 创建mysql数据库，将数据库文件导入你的mysql，目录地址：/hotgo-server/storage/hotgo.sql
- - 将/hotgo-server/config/config.example.yaml 改为：config.yaml，并根据你实际环境情况进行配置
+Server:
+ - Create a mysql database, import the database file into your mysql, directory address: /hotgo-server/storage/hotgo.sql
+ - Change /hotgo-server/config/config.example.yaml to: config.yaml, and configure it according to your actual environment
 
-web+uinapp端：
- - 配置服务端地址，包含在一下文件中：
+web+uinapp side:
+ - Configure the server address, which is included in the following file:
  * hotgo-uniapp/common/config.js 
  * /hotgo-uniapp/manifest.json 
  * hotgo-uniapp/common/config.js 
 
-三、 启动服务
-服务端：
+3. Start the service
+Server:
    ```shell script
   cd hotgo-server
-  go mod tidy  #更新包
-  go run main.go  #启动服务
+  go mod tidy  #update package
+  go run main.go  #start the service
 ```
 
-web端：
+web side:
    ```shell script
 cd hotgo-web
-npm install #安装依赖
-npm run dev #启动web项目
+npm install #Install dependencies
+npm run dev #start web project
 ```
-uinapp端：
-- 1、下载并安装：集成开发环境 HBuilderX （推荐，也可以使用 VSCode 或 WebStorm）
-- 2、菜单：文件 -> 导入 -> 从本地目录导入，选择 “jeesite4-uniapp” 文件夹。
-- 3、菜单：运行 -> 运行到内置浏览器（或运行到浏览器 -> Chrome 浏览器）。
-- 4、等待 HBuliderX 控制台编译完成后，会自动弹出手机登录页面。
+uinapp side:
+- 1、Download and install: Integrated Development Environment HBuilderX (recommended, VSCode or WebStorm can also be used)
+- 2、Menu: File -> Import -> Import from local directory, select the "jeesite4-uniapp" folder.
+- 3、Menu: Run -> Run to Built-in Browser (or Run to Browser -> Chrome Browser).
+- 4、After the HBuliderX console is compiled, the mobile phone login page will pop up automatically.
 
 
-## 特别感谢(以下排名不分先后)
+## Special thanks to(The following ranks are in no particular order)
 
 * goframe2.0 https://goframe.org
 * JeeSite Mobile Uni-App https://gitee.com/thinkgem/jeesite4-uniapp
 * aidex-sharp https://gitee.com/big-hedgehog/aidex-sharp
 
-## 开源声明
-* 目前项目还在持续更新中，仅供参考学习，如遇到问题请联系作者下方微信！
+## Open Source Statement
+* At present, the project is still being updated continuously and is only for reference and learning. If you encounter any problems, please contact the author on the WeChat below!
 
 ![image](https://user-images.githubusercontent.com/26652343/155691271-1ded98d8-f0f1-4467-9079-26cec1195af5.png)
